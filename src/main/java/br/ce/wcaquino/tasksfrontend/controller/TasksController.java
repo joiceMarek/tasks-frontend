@@ -53,7 +53,7 @@ public class TasksController {
 			model.addAttribute("success", "Success!");
 			return "index";
 		} catch(Exception e) {
-			Pattern compile = Pattern.compile("message\":\"(.*)\"");
+			Pattern compile = Pattern.compile("message\":\"(.*?)\"");
 			Matcher m = compile.matcher(e.getMessage());
 			m.find();
 			model.addAttribute("error", m.group(1));
